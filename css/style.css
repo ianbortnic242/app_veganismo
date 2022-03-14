@@ -281,4 +281,45 @@ mobile: */
     }
 }
 
+.box{
+    width: 800px;
+    height:40px;
+    margin: 60px 40px;
+    border-radius: 6px;
+}
 
+.box-one{
+    background-color: red;
+}
+
+.box-two{
+    background-color: blue;
+}
+
+.box:hover{
+    transform: scale(1.2) translateX(200px);
+}
+
+
+/* .transition{
+    transition: all 1s;
+} */
+
+.transition:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+/* img:hover{
+    transform: scale(1.1);
+    transition: all 2s;
+} */
+
+
+.move-center:hover h2{
+    transform: translateX(725px) scale(1.4);
+    -webkit-transform: translateX(725px) scale(1.4);
+    -o-transform: translateX(725px) scale(1.4);
+    -moz-transform: translateX(725px) scale(1.4);
+    transition: all 1.5s;
+}

@@ -7,6 +7,7 @@
     <title>Introducción</title>
     <link rel="shorcut icon" href="../img/logo.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav class='background'>
@@ -34,12 +35,12 @@
 
 
     <main>
-        <section>
+        <section  data-aos="fade-right" class="move-center">
         <h2>Lo Básico</h2>
         <div class="grid__section flexbox__links">
             <div>
                 <div>
-                    <img src="../img/introduccion/comida.png" height="150px" alt="">
+                    <img class="transition" src="../img/introduccion/comida.png" height="150px" alt="">
                 </div>
                 <div>
                     <a href="">¿Por qué Veganismo?</a>
@@ -48,7 +49,7 @@
             </div>
             <div>
                 <div>
-                    <img src="../img/introduccion/factibilidad.png" height="150px" alt="">
+                    <img class="transition" src="../img/introduccion/factibilidad.png" height="150px" alt="">
                 </div>
                 <div>
                     <a href="">¿Es Factible?</a>
@@ -57,12 +58,12 @@
         </div>
         </section>
 
-        <section>
+        <section  data-aos="fade-right" class="move-center"n>
             <h2>Conceptos</h2>
             <div class="grid__section flexbox__links">
                 <div>
                     <div>
-                        <img src="../img/introduccion/bienestarismo.png" height="150px" alt="">
+                        <img class="transition" src="../img/introduccion/bienestarismo.png" height="150px" alt="">
                     </div>
                     <div>
                         <a href="">Bienestarismo</a>
@@ -70,7 +71,7 @@
                 </div>
                 <div>
                     <div>
-                        <img src="../img/introduccion/abolicionismo.png" height="150px" alt="">
+                        <img class="transition" src="../img/introduccion/abolicionismo.png" height="150px" alt="">
                     </div>
                     <div>
                         <a href="">Abolicionismo</a>
@@ -80,12 +81,12 @@
             </div>
         </section>
 
-        <section>
+        <section  data-aos="fade-right" class="move-center">
             <h2>Autores</h2>
             <div class="grid__section flexbox__links">
                 <div>
                     <div>
-                        <img src="../img/introduccion/peter_singer.png" height="150px" alt="">
+                        <img class="transition" src="../img/introduccion/peter_singer.png" height="150px" alt="">
                     </div>
                     <div>
                         <a href="">Peter Singer</a>
@@ -93,7 +94,7 @@
                 </div>
                 <div>
                     <div>
-                        <img src="../img/introduccion/gary_francoise.png" height="150px" alt="">
+                        <img class="transition" src="../img/introduccion/gary_francoise.png" height="150px" alt="">
                     </div>
                     <div>
                         <a href="">Gary Francione  </a>
@@ -126,6 +127,10 @@
             </ul>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>
