@@ -323,3 +323,26 @@ mobile: */
     -moz-transform: translateX(725px) scale(1.4);
     transition: all 1.5s;
 }
+
+
+
+
+/* Bootstrap */
+
+
+.navbar-custom .nav-link{
+    font-size: 18px;
+    color:white;
+    margin-right: 15px;
+}
+
+.font-color a{
+    color:black;
+}
+
+.navbar-margin{
+    margin-left: 200px;
+}
+
+
+
