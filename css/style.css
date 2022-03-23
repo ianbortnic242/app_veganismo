@@ -167,4 +167,10 @@ ul {
 }
 
 
+.hojita:hover::after{
+    content: "🌱";
+}
 
+.link-active{
+    font-weight: bold;
+}
