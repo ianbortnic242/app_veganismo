@@ -1,176 +1,153 @@
+@charset "UTF-8";
 .background {
-    background-color: #72D3AD;
+  background-color: #72D3AD;
 }
 
-.row_list li{
-    display: inline-block;
-    margin-right: 30px;
+li a:hover {
+  color: black;
+  text-decoration: underline;
 }
 
-
-li a:hover{
-    color: black;
-    text-decoration: underline;
+.margin_logo {
+  margin-left: 10px;
 }
 
-nav ul li a{
-    padding: 5px 5px 5px 5px;
+.margin_pages {
+  margin-right: 40px;
 }
-
-.margin_logo{
-    margin-left: 10px;
-}
-
-.margin_pages{
-    margin-right: 40px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
 
 .news-image {
-    background-image: url('../img/index/news_3.jpeg');
-    height: 80px;
-    color:mintcream;
-    padding: 20px 0 0 20px;
-    font-size: 50px;
+  background-image: url("../img/index/news_3.jpeg");
+  height: 80px;
+  color: mintcream;
+  padding: 20px 0 0 20px;
+  font-size: 50px;
 }
-
 
 .introduction__title {
-    color: darkblue;
-    font-family: 'Arimo', sans-serif;
-    text-transform: uppercase;
-    font-weight: 1,700;
-    text-align: center
+  color: darkblue;
+  font-family: "Arimo", sans-serif;
+  text-transform: uppercase;
+  font-weight: 1, 700;
+  text-align: center;
 }
 
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-
 
 p {
-    text-align:center;
-    line-height: 30px;
-    height: 100px;
-    overflow: auto;
+  text-align: center;
+  line-height: 30px;
+  height: 100px;
+  overflow: auto;
 }
 
 .button {
-    padding: 2px;
-    border:1px solid black;
-    border-radius: 5px;
-    font-size: 10px;
-    text-decoration: none;
-    text-align: center;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
 }
 
 footer div {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
-
-.flexbox{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.flexbox div{
-    display: flex;
-    flex-direction: column;
+.flexbox div {
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-.flexbox_2{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:flex-start;
-}
-
-.margin_contacto{
-    margin-right:70px
+.margin_contacto {
+  margin-right: 70px;
 }
 
 ul {
-    padding-inline-start:0;
+  padding-inline-start: 0;
 }
 
-.no_bullets{
-    list-style-type:none;
+.flexbox__column2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: center; */
 }
 
-
-.flexbox__column2{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: center; */
+.margin-section {
+  margin-bottom: 40px;
 }
 
-
-.margin-section{
-    margin-bottom: 40px;
+.margin-title {
+  margin-top: 40px;
 }
 
-.margin-title{
-    margin-top: 40px;
+.transition:hover {
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
-
-.transition:hover{
-    transform: scale(1.1);
-    transition: all 1s;
+.move-center:hover h2 {
+  transform: translateX(725px) scale(1.4);
+  -webkit-transform: translateX(725px) scale(1.4);
+  -o-transform: translateX(725px) scale(1.4);
+  -moz-transform: translateX(725px) scale(1.4);
+  transition: all 1.5s;
 }
-
-/* img:hover{
-    transform: scale(1.1);
-    transition: all 2s;
-} */
-
-
-.move-center:hover h2{
-    transform: translateX(725px) scale(1.4);
-    -webkit-transform: translateX(725px) scale(1.4);
-    -o-transform: translateX(725px) scale(1.4);
-    -moz-transform: translateX(725px) scale(1.4);
-    transition: all 1.5s;
-}
-
 
 /* Bootstrap */
-
-
-.navbar-custom .nav-link{
-    font-size: 18px;
-    color:white;
-    margin-right: 15px;
+.navbar-custom .nav-link {
+  font-size: 18px;
+  color: white;
+  margin-right: 15px;
 }
 
-.font-color a{
-    color:black;
+.font-color a {
+  color: black;
 }
 
-.navbar-margin{
-    margin-left: 200px;
+.navbar-margin {
+  margin-left: 200px;
 }
 
-
-.hojita:hover::after{
-    content: "🌱";
+.hojita:hover::after {
+  content: "🌱";
 }
 
-.link-active{
-    font-weight: bold;
+.link-active {
+  font-weight: bold;
 }
+
+footer {
+  background-color: #72D3AD;
+}
+footer div {
+  margin-right: 70px;
+}
+footer div ul {
+  list-style-type: none;
+}
+
+.row_list li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.flexbox_2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/*# sourceMappingURL=style.css.map */
