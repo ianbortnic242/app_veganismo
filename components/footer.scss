@@ -1,15 +1,14 @@
-@import "../base/variables";
+@import "../base/maps";
+@import "../base/extends";
 
 footer{
-    background-color: $bg-color;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: map-get($common-parameters, bg-color);
+    @extend %flexbox_row;
     justify-content:flex-start;
     div{
         margin-right: 70px;
         ul{
-            list-style-type: $list-type;
+            list-style-type: map-get($common-parameters, list-type);
         }
 
     }
