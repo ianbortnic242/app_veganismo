@@ -101,8 +101,17 @@ ul {
 /* Bootstrap */
 .navbar-custom .nav-link {
   font-size: 18px;
-  color: white;
-  margin-right: 15px;
+  color: white !important;
+  /* margin-right: 15px; */
+  font-weight: 600;
+}
+
+.navbar-custom{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
 }
 
 .font-color a {
@@ -144,3 +153,35 @@ footer div ul {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.hh{
+
+    background-color: red;
+}
+
+/* .navbar-collapse{
+    border: 1px solid red;
+    /* display: inline-block; */
+    /* width: 30px; */
+} */
+
+
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.navbar-nav{
+    margin-right: 0 !important;
+}
+
+.nav-item{
+    margin:0;
+    padding:0;
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
