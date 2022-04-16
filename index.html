@@ -16,12 +16,12 @@
     <!-- tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Arimo:ital,wght@1,400;1,700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark background">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark background">
             <div class="container-fluid">
             <a href="./index.html"><img src="./img/index/logo.png" height="80px" alt="logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,6 @@
                 <ul class="navbar-nav navbar-custom">
                     <li class="nav-item"><a class="nav-link" href="./pages/introduccion.html">Introducción</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/objeciones.html">Objeciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/temas-complejos.html">Temas Complejos</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/salud.html">Salud</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/compras.html">Compras</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/recetas.html">Recetas</a></li>
@@ -44,125 +43,74 @@
 
 
 
-        <main>
-            <div class="column">
-                <div class="row">
-                    <h1 class="introduction__title margin-title ">Vegin: Tu guia para el Veganismo</h1>
-                    <p>
-                        Página enfocada en facilitar la transición al veganismo. Podrás encontrar información <br>
-                        acerca del veganimo, objeciones típicas, temas complejos, salud, recetas y mucho mas!
-                    </p>
-                </div>
-            </div>
+        <div class="bckg_image">
+          <h1 class="introduction__title">Vegin: Veganismo Más Cerca</h1>
+          <p>
+              Sitio enfocada en facilitar la transición al veganismo. Aprenderás sobre los conceptos básicos de veganismo,
+              objeciones típicas, temas complejos, salud, recetas y mucho mas!
+          </p>
 
+          <div class="column">
+            <div class="row">
 
-
-            <div data-aos="fade-right" class="column margin mb-2">
-                <div class="row">
-                    <div class=" col-md-6 d-flex flex-column align-items-center mb-1">
-                        <div>
-                            <img class="transition" src="./img/index/cerditos.png" width="350px" alt="cerditos felices">
-                        </div>
-                        <div>
-                            <img class="transition" src="./img/index/vegan_food.png" width="350px" alt="vegan food">
-                        </div>
+                  <div class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="index_topics">
+                      <img src="./img/index/cow_in_clearing.jpg" alt="" class="i2">
+                      <h1 class="centered">Introducción</h1>
                     </div>
-                    <!-- <div class="col-md-6 d-flex align-items-center justify-content-center">
-                        <iframe width="450" height="275" src="https://www.youtube.com/embed/N2OL9mjq1h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div> -->
-                    <div id="carouselExampleIndicators" class="col-md-6 carousel slide d-flex align-items-center justify-content-center" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <iframe class="d-block w-100" alt="¿Qué es el Veganismo?" height="275px" src="https://www.youtube.com/embed/N2OL9mjq1h0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          </div>
-                          <div class="carousel-item">
-                            <iframe class="d-block w-100" alt="Introducción al Veganismo" height="275px" src="https://www.youtube.com/embed/GnQeg4iwGk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          </div>
-                          <div class="carousel-item">
-                            <iframe class="d-block w-100" alt="Guía vegana para principiantes: 10 consejos claves" height="275px" src="https://www.youtube.com/embed/JNFAnb4etuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-
-
-                </div>
-            </div>
-
-        </main>
-        <section  data-aos="fade-right" class="margin-section">
-
-            <h2 class="news-image">Lo Último</h2>
-            <div class="margin-section column font-color">
-                <div class="row">
-                    <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div class=>
-                            <img class="transition" src="./img/index/paper_cientifico.jpeg" height="120px" alt="nuevos estudios">
-                        </div>
-                        <div>
-                            <a class='button' href="#">Nuevos Estudios</a>
-                        </div>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="index_topics ">
+                      <img src="./img/index/objeciones.jpg" alt="" class="i2">
+                      <h1 class="centered">Objeciones</h1>
                     </div>
-                    <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div>
-                            <img class="transition" src="./img/index/nuevas_tiendas.png" height="120px" alt="nuevas tiendas">
-                        </div>
-                        <div>
-                            <a class='button' href="#">Nuevas Tiendas</a>
-                        </div>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="index_topics ">
+                      <img src="./img/index/nutricionista.jpg" alt="" class="i2">
+                      <h1 class="centered">Salud</h1>
                     </div>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="index_topics ">
+                      <img src="./img/index/compras.jpg" alt="" class="i2">
+                      <h1 class="centered">Compras</h1>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="index_topics ">
+                      <img src="./img/index/recetas.jpg" alt="" class="i2">
+                      <h1 class="centered">Recetas</h1>
+                    </div>
+                  </div>
+      </div>
 
-                    <div class="col-md-4 d-flex flex-column align-items-center">
-                        <div>
-                            <img class="transition" src="./img/index/cambio_climatico.jpeg" height="120px" alt="cambio climatico">
-                        </div>
-                        <div>
-                            <a class='button' href="#">Cambio Climático</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
+
+
         <footer>
-            <div>
-                <h4>Contacto</h4>
-                <ul>
-                    <li>Telefono: +56993471839aa</li>
-                    <li>Mail: veginchile@gmail.com</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Síguenos:</h4>
-                <!-- por ahora los links no llevan a nada -->
+          <div>
+              <h4>Contacto</h4>
+              <ul>
+                  <li>Telefono: +56993471839aa</li>
+                  <li>Mail: veginchile@gmail.com</li>
+              </ul>
+          </div>
+          <div>
+              <h4>Síguenos:</h4>
+              <!-- por ahora los links no llevan a nada -->
 
-                <ul class="row_list">
+              <ul class="row_list">
 
-                    <li><a href=""><img src="./img/index/instagram.png" height="30px" alt="instagram"></a></li>
-                    <li><a href=""><img src="./img/index/facebook.png" height="30px" alt="facebook"></a></li>
-                    <li><a href=""><img src="./img/index/twitter.png" height="30px" alt="twitter"></a></li>
-                </ul>
-            </div>
-        </footer>
+                  <li><a href=""><img src="./img/index/instagram.png" height="30px" alt="instagram"></a></li>
+                  <li><a href=""><img src="./img/index/facebook.png" height="30px" alt="facebook"></a></li>
+                  <li><a href=""><img src="./img/index/twitter.png" height="30px" alt="twitter"></a></li>
+              </ul>
+          </div>
+      </footer>
 
-    </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
 
