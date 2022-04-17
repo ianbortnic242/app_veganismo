@@ -45,14 +45,22 @@ li a:hover {
   width: 80%;
 }
 
-.bckg_image{
+.bckg_image_index{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/cows_on_meadow.jpg);
   background-position: center ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding-top: 100px;
+}
 
+.bckg_image_introduccion{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/cow_in_clearing.jpg); */
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 100px;
 }
 
 .introduction__title {
@@ -121,17 +129,30 @@ ul {
   transition: all 1s;
 }
 
-.move-center:hover h2 {
+/* .move-center:hover h2 {
   transform: translateX(725px) scale(1.4);
   transition: all 1.5s;
+} */
+
+
+
+.link-color a{
+  color: white;
 }
 
 /* Bootstrap */
 .navbar-custom .nav-link {
   font-size: 17px;
-  color: white !important;
   font-weight: 1, 400;
   /* margin-right: 15px; */
+}
+
+.selected{
+  color: black !important;
+}
+
+.not_selected{
+  color: white !important
 }
 
 .navbar-custom{
@@ -141,6 +162,16 @@ ul {
     justify-content: flex-end;
     margin-bottom: 0;
 }
+
+.introduccion_section{
+  margin-left: 20px;
+}
+
+.introduccion_block{
+  padding-bottom: 50px;
+}
+
+
 
 .font-color a {
   color: black;
@@ -225,8 +256,22 @@ footer div ul {
   border: 1px solid white;
 }
 
+.introduccion_topics{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
 .i2{
   max-width: 100%;
+}
+
+.i3{
+  max-height: 100%;
 }
 
 .centered {
@@ -236,4 +281,6 @@ footer div ul {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   font-size:2vw;
+  font-size: 20px;
+  text-align: center;
 }

@@ -12,9 +12,10 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Arimo:ital,wght@1,400;1,700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark background">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark background">
         <div class="container-fluid">
         <a href="../index.html"><img src="../img/index/logo.png" height="80px" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,113 +23,83 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-custom">
-                <li class="nav-item"><a class="nav-link" href="./introduccion.html">Introducción</a></li>
-                <li class="nav-item"><a class="nav-link" href="./objeciones.html">Objeciones</a></li>
-                <li class="nav-item"><a class="nav-link" href="./salud.html">Salud</a></li>
-                <li class="nav-item"><a class="nav-link" href="./compras.html">Compras</a></li>
-                <li class="nav-item"><a class="nav-link" href="./recetas.html">Recetas</a></li>
+                <li class="nav-item"><a class="nav-link selected" href="../pages/introduccion.html">Introducción</a></li>
+                <li class="nav-item"><a class="nav-link not_selected" href="../pages/objeciones.html">Objeciones</a></li>
+                <li class="nav-item"><a class="nav-link not_selected" href="../pages/salud.html">Salud</a></li>
+                <li class="nav-item"><a class="nav-link not_selected" href="../pages/compras.html">Compras</a></li>
+                <li class="nav-item"><a class="nav-link not_selected" href="../pages/recetas.html">Recetas</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
-    </header>
-    <h1 class="introduction__title mb-2">Introducción</h1>
 
 
+    <main class="bckg_image_introduccion">
 
-    <main class="mb-3">
-        <section  data-aos="fade-right" class="move-center">
-        <h2>Lo Básico</h2>
-        <div class="column">
-
+        <div class="column introduccion_block">
+            <h2 data-aos="zoom-in" class="introduccion_section">Lo Básico</h2>
             <div class="row">
-                <div class="col-lg-6 d-flex flex-column align-items-center">
-                    <div>
-                        <img class="transition" src="../img/introduccion/comida.png" height="150px" alt="¿Por qué Veganismo?">
-                    </div>
-                    <div>
-                        <a href="">¿Por qué Veganismo?</a>
+                <div data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="introduccion_topics">
+                    <img src="../img/introduccion/porque_veganismo.jpg" alt="" class="i3">
+                    <h1 class="centered">¿Por qué Veganismo?</h1>
                     </div>
                 </div>
-
-                <div class="col-lg-6 d-flex flex-column align-items-center">
-                    <div>
-                        <img class="transition" src="../img/introduccion/factibilidad.png" height="150px" alt="¿Es Factible el Veganismo?">
-                    </div>
-                    <div>
-                        <a href="">¿Es Factible?</a>
-                    </div>
+                <div data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                <div class="introduccion_topics ">
+                    <img src="../img/introduccion/es_factible.jpg" alt="" class="i3">
+                    <h1 class="centered">¿Es Factible?</h1>
+                </div>
                 </div>
             </div>
-
         </div>
-        </section>
+        <div class="column introduccion_block">
+            <h2 data-aos="zoom-in" class="introduccion_section">Conceptos</h2>
+            <div class="row">
 
-
-        <section  data-aos="fade-right" class="move-center">
-            <h2>Conceptos</h2>
-            <div class="column">
-
-                <div class="row">
-                    <div class="col-lg-6 d-flex flex-column align-items-center">
-                        <div>
-                            <img class="transition" src="../img/introduccion/bienestarismo.png" height="150px" alt="Bienestarismo">
-                        </div>
-                        <div>
-                            <a href="">Bienestarismo</a>
-                        </div>
+                  <div data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="introduccion_topics ">
+                      <img src="../img/introduccion/bienestarismo_img.jpg" alt="" class="i3">
+                      <h1 class="centered">Bienestarismo</h1>
                     </div>
-                    <div class="col-lg-6 d-flex flex-column align-items-center">
-                        <div>
-                            <img class="transition" src="../img/introduccion/abolicionismo.png" height="150px" alt="Abolicionismo">
-                        </div>
-                        <div>
-                            <a href="">Abolicionismo</a>
-                        </div>
+                  </div>
+                  <div data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="introduccion_topics ">
+                      <img src="../img/introduccion/abolicionismo_img.jpg" alt="" class="i3">
+                      <h1 class="centered">Abolicionismo</h1>
                     </div>
+                  </div>
                 </div>
             </div>
-            </section>
-
-
-
-            <section  data-aos="fade-right" class="move-center">
-                <h2>Autores</h2>
-                <div class="column">
-
-                    <div class="row">
-                        <div class="col-lg-6 d-flex flex-column align-items-center">
-                            <div>
-                                <img class="transition" src="../img/introduccion/peter_singer.png" height="150px" alt="Peter Singer">
-                            </div>
-                            <div>
-                                <a href="">Peter Singer</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 d-flex flex-column align-items-center">
-                            <div>
-                                <img class="transition" src="../img/introduccion/gary_francoise.png" height="150px" alt="Gary Francione">
-                            </div>
-                            <div>
-                                <a href="">Gary Francione</a>
-                            </div>
-                        </div>
+        <div class="column introduccion_block">
+            <h2 data-aos="zoom-in" class="introduccion_section">Autores</h2>
+            <div class="row">
+                  <div data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="introduccion_topics ">
+                      <img src="../img/introduccion/peter_singer_img.png" alt="" class="i3">
+                      <h1 class="centered">Peter Singer</h1>
                     </div>
-
+                  </div>
+                  <div data-aos="zoom-in" data-aos="zoom-in" class="col-md-6 d-flex flex-column align-items-center mb-4 mt-4">
+                    <div class="introduccion_topics ">
+                      <img src="../img/introduccion/gary_francoise_img.jpeg" alt="" class="i3">
+                      <h1 class="centered">Gary Francione</h1>
+                    </div>
+                  </div>
                 </div>
-                </section>
+            </div>
+      </div>
 
 
     </main>
 
 
 
-    <footer class='background flexbox_2'>
-        <div class="margin_contacto">
+    <footer>
+        <div>
             <h4>Contacto</h4>
-            <ul class="no_bullets">
+            <ul>
                 <li>Telefono: +56993471839aa</li>
                 <li>Mail: veginchile@gmail.com</li>
             </ul>
