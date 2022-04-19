@@ -3,15 +3,6 @@
   color: white
  }
 
-
-
-@charset "UTF-8";
-footer, .flexbox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .background {
   background-color: #72D3AD;
 }
@@ -50,12 +41,11 @@ li a:hover {
 }
 
 .bckg_image_index{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/cows_on_meadow.jpg);
-  background-position: center ;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/index_bckg.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 100px;
 }
 
 .bckg_image_recetas{
@@ -125,8 +115,13 @@ a {
   line-height: 50px;
   overflow: auto;
   font-weight: 1,400;
-  font-size:2vw;
+  font-size:16px;
 }
+
+/* manejar el tamaño del titulo en media queries
+hacer las media queries en 640 */
+
+
 
 .button {
   padding: 2px;
@@ -135,10 +130,6 @@ a {
   font-size: 10px;
   text-decoration: none;
   text-align: center;
-}
-
-footer div {
-  padding-left: 20px;
 }
 
 .flexbox {
@@ -255,29 +246,6 @@ ul {
   font-weight: bold;
 }
 
-footer, .flexbox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-footer{
-  background-color: #72D3AD;
-  justify-content: flex-start;
-  padding-top: 20px;
-}
-footer div {
-  margin-right: 70px;
-}
-footer div ul {
-  list-style-type: none;
-}
-
-.row_list li {
-  display: inline-block;
-  margin-right: 30px;
-}
-
 .navbar-nav{
     margin-right: 0 !important;
 }
@@ -295,14 +263,16 @@ footer div ul {
 	position:sticky !important;
 } */
 
-.index_topics{
-  position: relative;
-  width: 406px;
-  height: 265px;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
+.index_topics_size{
+  width: 80%;
+  padding-bottom: 50%;
+
+}
+
+.index_topics_alone_size{
+  width: 40%;
+  height: 0;
+  padding-bottom: 25%;
 }
 
 .compras_topics{
@@ -328,25 +298,41 @@ footer div ul {
   align-items: center;
 }
 
+.i2{
+  max-width: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size:2vw;
+  font-size: 20px;
+  text-align: center;
+}
+
 .hola{
   justify-content: center;
 }
 
-
-
-.introduccion_topics{
+.topics{
   position: relative;
-  width: 300px;
-  height: 300px;
+  height: 0;
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid white;
 }
 
-.i2{
-  max-width: 100%;
+.introduccion_topics{
+  width: 300px;
+  height: 300px;
+
 }
+
+
 
 .i3{
   max-height: 100%;
@@ -369,17 +355,6 @@ footer div ul {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
-  text-align: center;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size:2vw;
-  font-size: 20px;
   text-align: center;
 }
 
@@ -424,3 +399,34 @@ footer div ul {
   border: 1px solid white;
   align-items: center;
 }
+
+@media screen and (max-width:768px){
+  .index_topics_size, .index_topics_alone_size{
+    width: 50%;
+    padding-bottom: 30%;
+  }
+
+}
+
+@media screen and (max-width:576px){
+  .resize_social_media img{
+    height: 30px;
+  }
+}
+
+
+
+
+/* footer */
+
+
+footer{
+  background-color: #72D3AD;
+  padding-right:20%;
+  padding-left:20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
