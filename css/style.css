@@ -1,3 +1,6 @@
+/* Used */
+
+
 * {
   font-family: "Poppins", sans-serif;
   color: white
@@ -7,49 +10,41 @@
   background-color: #72D3AD;
 }
 
+
 .text-color{
   color:#72D3AD;
 }
 
 li a:hover {
-  color: black;
+  color: black !important;
   text-decoration: underline;
 }
 
-.margin_logo {
-  margin-left: 10px;
-}
 
-.margin_pages {
-  margin-right: 40px;
-}
+/* done */
 
-.img_index{
-  filter: brightness(60%);
-  width: 100%;
-}
-
-.container_index {
-  position: relative;
-  text-align: center;
-}
-
-.over_image {
-  position: absolute;
-  top: 300px;
-  width: 80%;
-}
 
 .bckg_image_index{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/index_bckg.jpg);
+  padding-top: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
+
+.bckg_image_objeciones{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/objeciones/gallina_bck_image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 50px;
+}
+
 .bckg_image_recetas{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/recetas.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/recetas/bckg_recetas.jpg);
   background-position: center ;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,17 +53,9 @@ li a:hover {
 
 }
 
-.bckg_image_introduccion{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/cow_in_clearing.jpg); */
-  background-position: center ;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding-top: 100px;
-}
 
 .bckg_image_salud{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/nutricionista.jpg); */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/salud/salud_bckground.jpg);
   background-position: center ;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -76,9 +63,9 @@ li a:hover {
   padding-top: 50px;
 }
 
-.bckg_image_objeciones{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/objeciones.jpg); */
-  background-position: center ;
+.bckg_image_introduccion{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/introduccion/bck_image.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -87,7 +74,7 @@ li a:hover {
 
 
 .bckg_image_compras{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/index/compras.jpg); */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/compras/compras_bckg.jpg);
   background-position: center ;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -101,21 +88,13 @@ li a:hover {
   text-transform: uppercase;
   font-weight: 1, 700;
   text-align: center;
-  font-size: 7vw;
-  margin-bottom: 100px;
+  font-size: 40px;
+  margin-bottom: 50px;
   color: #FFFFFF;
 }
 
 a {
   text-decoration: none;
-}
-
-.p_index {
-  text-align: center;
-  line-height: 50px;
-  overflow: auto;
-  font-weight: 1,400;
-  font-size:16px;
 }
 
 /* manejar el tamaño del titulo en media queries
@@ -178,7 +157,6 @@ ul {
 .navbar-custom .nav-link {
   font-size: 17px;
   font-weight: 1, 400;
-  /* margin-right: 15px; */
 }
 
 .selected{
@@ -206,7 +184,11 @@ ul {
   margin-bottom: 30px;
 }
 
-.p_salud {
+.recetas_section{
+  text-align: center;
+}
+
+.p_bajada {
   text-align: center;
   font-weight: 1,400;
   font-size: 15px;
@@ -218,7 +200,7 @@ ul {
 }
 
 .center_p{
-  width:80%;
+  width: 80%;
   margin: 0 auto;
 
 }
@@ -269,6 +251,55 @@ ul {
 
 }
 
+.carrousel_size{
+  width: 50%;
+  padding-bottom: 32%;
+
+}
+
+.carrousel2_size{
+  width: 60%;
+  padding-bottom: 32%;
+
+}
+
+.recetas_size{
+  width: 50%;
+  padding-bottom: 35%;
+
+}
+
+.compras_size{
+  width: 55%;
+  padding-bottom: 30%;
+
+}
+
+
+
+.avales_size{
+  width: 55%;
+  padding-bottom: 53%;
+
+}
+
+
+.margin_top{
+  margin-top: 50px;
+}
+
+.nutrientes_size{
+  width: 55%;
+  padding-bottom: 63%;
+
+}
+
+.salud_topics_size{
+  width: 60%;
+  padding-bottom: 20%;
+
+}
+
 .index_topics_alone_size{
   width: 40%;
   height: 0;
@@ -302,6 +333,11 @@ ul {
   max-width: 100%;
 }
 
+.i5{
+  width: 100%;
+  height: 100%;
+}
+
 .centered {
   position: absolute;
   top: 50%;
@@ -326,6 +362,16 @@ ul {
   border: 1px solid white;
 }
 
+
+
+.topics2{
+  position: relative;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
 .introduccion_topics{
   width: 300px;
   height: 300px;
@@ -333,14 +379,9 @@ ul {
 }
 
 
-
-.i3{
-  max-height: 100%;
-}
-
 .centered_down {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -377,12 +418,35 @@ ul {
 .button_nutricionistas{
   background: #86BDBC;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid white;
+}
+
+.margin_bottom div{
+  margin-bottom: 40px;
+}
+
+
+.button_recetas{
+  width:80%;
+  position: relative;
+  overflow: auto;
+}
+
+.button_recetas h2{
+  background: #86BDBC;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  border: 1px solid white;
+
 }
 
 .center_p_aux{
@@ -391,13 +455,23 @@ ul {
 
 .salud_avales{
   position: relative;
-  width: 150px;
-  height: 150px;
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid white;
   align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+
+.topics{
+  position: relative;
+  height: 0;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid white;
 }
 
 @media screen and (max-width:768px){
@@ -411,6 +485,9 @@ ul {
 @media screen and (max-width:576px){
   .resize_social_media img{
     height: 30px;
+  }
+  .introduction__title{
+    font-size: 30px;
   }
 }
 
