@@ -21,8 +21,6 @@ li a:hover {
 }
 
 
-/* done */
-
 
 .bckg_image_index{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/index/index_bckg.jpg);
@@ -83,7 +81,7 @@ li a:hover {
 
 }
 
-.introduction__title {
+.introduction_title {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 1, 700;
@@ -97,67 +95,16 @@ a {
   text-decoration: none;
 }
 
-/* manejar el tamaño del titulo en media queries
-hacer las media queries en 640 */
-
-
-
-.button {
-  padding: 2px;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 10px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.flexbox {
-  justify-content: space-around;
-  align-items: center;
-}
-
-.flexbox div {
-  display: flex;
-  flex-direction: column;
-}
-
-.margin_contacto {
-  margin-right: 70px;
-}
-
-ul {
-  padding-inline-start: 0;
-}
-
-.margin-section {
-  margin-bottom: 40px;
-}
-
-.margin-title {
-  margin-top: 40px;
-}
-
-.transition:hover {
+.transition:hover{
   transform: scale(1.1);
   transition: all 1s;
 }
 
-/* .move-center:hover h2 {
-  transform: translateX(725px) scale(1.4);
-  transition: all 1.5s;
-} */
-
-
-
-.link-color a{
-  color: white;
-}
-
-/* Bootstrap */
 .navbar-custom .nav-link {
   font-size: 17px;
   font-weight: 1, 400;
 }
+
 
 .selected{
   color: black !important;
@@ -175,16 +122,31 @@ ul {
     margin-bottom: 0;
 }
 
-.introduccion_section{
+
+.navbar-nav{
+  margin-right: 0 !important;
+}
+
+.nav-item{
+  margin:0;
+  padding:0;
+}
+
+.navbar-collapse{
+  flex-grow: 0;
+}
+
+.section_margin section{
   margin-left: 20px;
 }
 
-.salud_section{
+
+.format_section h2{
   margin-left: 20px;
   margin-bottom: 30px;
 }
 
-.recetas_section{
+.center_text{
   text-align: center;
 }
 
@@ -195,9 +157,26 @@ ul {
   line-height: 30px;
 }
 
-.salud_block{
-  margin-top: 100px;
+
+
+.button_recetas{
+  width:80%;
+  position: relative;
+  overflow: auto;
 }
+
+.button_recetas h3{
+  background: #86BDBC;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  border: 1px solid white;
+
+}
+
 
 .center_p{
   width: 80%;
@@ -206,48 +185,52 @@ ul {
 }
 
 .center_p2{
-  width:40%;
+  width: 40%;
   margin: 0 auto;
   padding-bottom: 50px;
-
 }
-
-.font-color a {
-  color: black;
-}
-
-.navbar-margin {
-  margin-left: 200px;
-}
-
-.hojita:hover::after {
-  content: "🌱";
-}
-
-.link-active {
-  font-weight: bold;
-}
-
-.navbar-nav{
-    margin-right: 0 !important;
-}
-
-.nav-item{
-    margin:0;
-    padding:0;
-}
-
-.navbar-collapse{
-    flex-grow: 0;
-}
-
-/* nav {
-	position:sticky !important;
-} */
 
 .index_topics_size{
   width: 80%;
   padding-bottom: 50%;
+
+}
+
+.index_topics_alone_size{
+  width: 40%;
+  height: 0;
+  padding-bottom: 25%;
+}
+
+.compras_size{
+  width: 55%;
+  padding-bottom: 30%;
+
+}
+
+
+.salud_topics_size{
+  width: 60%;
+  padding-bottom: 20%;
+
+}
+
+.nutrientes_size{
+  width: 55%;
+  padding-bottom: 63%;
+
+}
+
+
+.avales_size{
+  width: 55%;
+  padding-bottom: 53%;
+
+}
+
+.recetas_size{
+  width: 50%;
+  padding-bottom: 35%;
 
 }
 
@@ -263,79 +246,23 @@ ul {
 
 }
 
-.recetas_size{
-  width: 50%;
-  padding-bottom: 35%;
-
-}
-
-.compras_size{
-  width: 55%;
-  padding-bottom: 30%;
-
-}
-
-
-
-.avales_size{
-  width: 55%;
-  padding-bottom: 53%;
-
-}
-
 
 .margin_top{
   margin-top: 50px;
 }
 
-.nutrientes_size{
-  width: 55%;
-  padding-bottom: 63%;
 
-}
-
-.salud_topics_size{
-  width: 60%;
-  padding-bottom: 20%;
-
-}
-
-.index_topics_alone_size{
-  width: 40%;
+.topics{
+  position: relative;
   height: 0;
-  padding-bottom: 25%;
-}
-
-.compras_topics{
-  position: relative;
-  width: 506px;
-  height: 306px;
   box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid white;
-
 }
 
-
-.salud_topics{
-  position: relative;
-  width: 500px;
-  height: 265px;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
-  align-items: center;
-}
-
-.i2{
+.fill_div{
   max-width: 100%;
-}
-
-.i5{
-  width: 100%;
-  height: 100%;
 }
 
 .centered {
@@ -349,34 +276,6 @@ ul {
   text-align: center;
 }
 
-.hola{
-  justify-content: center;
-}
-
-.topics{
-  position: relative;
-  height: 0;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
-}
-
-
-
-.topics2{
-  position: relative;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
-}
-
-.introduccion_topics{
-  width: 300px;
-  height: 300px;
-
-}
 
 
 .centered_down {
@@ -389,45 +288,13 @@ ul {
   text-align: center;
 }
 
-.centered_down_objeciones {
-  position: absolute;
+.objeciones{
   top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
-  text-align: center;
 }
 
 .caps{
   text-transform: uppercase;
-}
-
-
-.salud_nutrientes{
-  position: relative;
-  width: 150px;
-  height: 180px;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
-  align-items: center;
-}
-
-.button_nutricionistas{
-  background: #86BDBC;
-  text-transform: uppercase;
-  font-size: 15px;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 15px;
-  border: 1px solid white;
-}
-
-.margin_bottom div{
-  margin-bottom: 40px;
 }
 
 
@@ -437,7 +304,7 @@ ul {
   overflow: auto;
 }
 
-.button_recetas h2{
+.button_nutricionistas, .button_recetas h3{
   background: #86BDBC;
   text-transform: uppercase;
   font-size: 15px;
@@ -446,33 +313,24 @@ ul {
   padding-bottom: 20px;
   border-radius: 15px;
   border: 1px solid white;
-
-}
-
-.center_p_aux{
-  text-align: center;
-}
-
-.salud_avales{
-  position: relative;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
-  align-items: center;
-  width: 150px;
-  height: 150px;
 }
 
 
-.topics{
-  position: relative;
-  height: 0;
-  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid white;
+.margin_bottom div{
+  margin-bottom: 40px;
 }
+
+
+footer{
+  background-color: #72D3AD;
+  padding-right:20%;
+  padding-left:20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
 
 @media screen and (max-width:768px){
   .index_topics_size, .index_topics_alone_size{
@@ -489,21 +347,5 @@ ul {
   .introduction__title{
     font-size: 30px;
   }
-}
-
-
-
-
-/* footer */
-
-
-footer{
-  background-color: #72D3AD;
-  padding-right:20%;
-  padding-left:20%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: space-around;
 }
 
