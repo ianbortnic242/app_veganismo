@@ -20,18 +20,25 @@ function get_cantidad_ingredientes(dic){
 }
 
 function get_informacion_nutricional_receta(dic){
-    let total_calorias = dic.reduce((acc, ing) => acc + ing.calorias * ing.cantidad, 0);
-    let total_proteinas = dic.reduce((acc, ing) => acc + ing.proteinas * ing.cantidad, 0);
-    let total_carbohidratos = dic.reduce((acc, ing) => acc + ing.carbohidratos * ing.cantidad, 0);
-    let total_grasa = dic.reduce((acc, ing) => acc + ing.grasa * ing.cantidad, 0);
-    let total_cantidad = dic.reduce((acc, ing) => acc + ing.cantidad, 0);
 
-    let calorias_per_100_gr = 100 * total_calorias / total_cantidad;
-    let proteinas_per_100_gr = 100 * total_proteinas / total_cantidad;
-    let carbohidratos_per_100_gr = 100 * total_carbohidratos / total_cantidad;
-    let grasa_per_100_gr = 100 * total_grasa / total_cantidad;
+    var values = [];
+    for([key, val] of Object.entries(dic)) {
+        values.push(val);
+      }
 
-    let final_string = `calorias: (${calorias_per_100_gr}), proteinas: (${proteinas_per_100_gr} gr.), carbohidratos: (${carbohidratos_per_100_gr} gr.), grasa: (${grasa_per_100_gr} gr.).`
+    console.log(values);
+    let total_calorias = values.reduce((acc, ing) => acc + ing['calorias'] * ing['cantidad'], 0);
+    let total_proteinas = values.reduce((acc, ing) => acc + ing['proteinas'] * ing['cantidad'], 0);
+    let total_carbohidratos = values.reduce((acc, ing) => acc + ing['carbohidratos'] * ing['cantidad'], 0);
+    let total_grasa = values.reduce((acc, ing) => acc + ing['grasas'] * ing['cantidad'], 0);
+    let total_cantidad = values.reduce((acc, ing) => acc + ing['cantidad'], 0);
+
+    let calorias_per_100_gr = Math.round(total_calorias / total_cantidad,1);
+    let proteinas_per_100_gr = Math.round(total_proteinas / total_cantidad,1);
+    let carbohidratos_per_100_gr = Math.round(total_carbohidratos / total_cantidad,1);
+    let grasa_per_100_gr = Math.round(total_grasa / total_cantidad,1);
+
+    let final_string = `calorias: (${calorias_per_100_gr}), proteinas: (${proteinas_per_100_gr} gr.), carbohidratos: (${carbohidratos_per_100_gr} gr.), grasas: (${grasa_per_100_gr} gr.).`
 
     return final_string;
 
@@ -48,7 +55,7 @@ class Receta{
         this.nombre_receta = nombre_receta;
         this.tipo_receta = tipo_receta
         this.ingredientes = ingredientes
-        this.informacion_nutricional = 'in process'
+        this.informacion_nutricional = informacion_nutricional
         this.preparacion = preparacion
     }
 }
@@ -60,9 +67,8 @@ function guardarReceta(receta){
         // "imagen": "../img_recetas/tiramisu.jpeg",
         "tipo_receta": receta.tipo_receta,
         "nombre_receta": receta.nombre_receta,
-        "ingredientes": get_cantidad_ingredientes(receta.ingredientes),
-        // "informacion_nutricional": get_informacion_nutricional_receta(receta.informacion_nutricional),
-        "informacion_nutricional": 'in process',
+        "ingredientes": receta.ingredientes,
+        "informacion_nutricional": receta.informacion_nutricional,
         "preparacion": receta.preparacion,
 
     })
@@ -113,7 +119,7 @@ btnIngresarIngrediente.addEventListener('click', ()=>{
                 if(response.items.length>0){
                     // console.log(response.items[0].name);
                     let info = response.items[0];
-                    new_ingredientes[nombre_ingrediente] = {'info': info,'proteina':info.protein_g, 'carbohidratos':info.carbohydrates_total_g,'grasa': info.fat_total_g,'calorias': info.calories,  'cantidad': cantidad_ingrediente};
+                    new_ingredientes[nombre_ingrediente] = {'info': info,'proteinas':info.protein_g, 'carbohidratos':info.carbohydrates_total_g,'grasas': info.fat_total_g,'calorias': info.calories,  'cantidad': cantidad_ingrediente};
                     console.log(new_ingredientes);
 
                 }else{
@@ -139,8 +145,8 @@ btnIngresarReceta.addEventListener('click', ()=>{
     let imagen = document.getElementById('imagen_receta').value;
     let tipo_receta = document.getElementById('tipo_receta').value;
     let nombre_receta = document.getElementById('nombre_receta').value;
-    let ingredientes = new_ingredientes;
-    let informacion_nutricional = "1 caloria";
+    let ingredientes = get_cantidad_ingredientes(new_ingredientes);
+    let informacion_nutricional = get_informacion_nutricional_receta(new_ingredientes);
     let preparacion = document.getElementById('preparacion').value;
 
 
@@ -171,59 +177,6 @@ btnIngresarReceta.addEventListener('click', ()=>{
 
 })
 
-
-// let btnVerRecetas = document.getElementById('Ver Recetas');
-
-// btnVerRecetas.addEventListener('click', ()=>{
-//     let lista_recetas = document.getElementById('lista recetas');
-//     lista_recetas.innerHTML = '';
-//     for(let i=0; i<localStorage.length; i++){
-//         let nombre_receta = localStorage.key(i);
-//         let li = document.createElement('li');
-//         li.innerHTML +=`<p>${nombre_receta}</p>`;
-//         lista_recetas.appendChild(li);
-
-//     }
-// })
-
-// let btnOcultarRecetas = document.getElementById('Ocultar Recetas');
-
-// btnOcultarRecetas.addEventListener('click', ()=>{
-//     let lista_recetas = document.getElementById('lista recetas');
-//     lista_recetas.innerHTML = '';
-// })
-
-
-
-
-// let btnEliminarReceta = document.getElementById('Eliminar Receta');
-
-// btnEliminarReceta.addEventListener('click', ()=>{
-//     let receta_eliminada = document.getElementById('nombre_receta_a_eliminar').value;
-//     if (localStorage.getItem(receta_eliminada) === null) {
-//         Swal.fire({
-//             icon: 'error',
-//             title: `Usted no tiene registrada la receta: ${receta_eliminada}`,
-//         })
-//     }
-//     else{
-//         Swal.fire({
-//             icon: 'success',
-//             title: `${receta_eliminada} ha sido eliminada de sus recetas.`,
-//         })
-//         localStorage.removeItem(receta_eliminada);
-//         let lista_recetas = document.getElementById('lista recetas');
-//         lista_recetas.innerHTML = '';
-//         for(let i=0; i<localStorage.length; i++){
-//             let nombre_receta = localStorage.key(i);
-//             let li = document.createElement('li');
-//             li.innerHTML +=`<p>${nombre_receta}</p>`;
-//             lista_recetas.appendChild(li);
-
-//         }
-
-//     }
-// })
 
 
 function createHTML(array) {
@@ -290,108 +243,3 @@ btnPropiasRecetas.addEventListener('click', () => {
     console.log(propias_recetas);
     createHTML(propias_recetas);
 })
-
-
-
-
-
-// CLASE 15 CODERHOUSE
-
-
-
-
-// const contenedor = document.querySelector('#contenedorTarjetas');
-// const container = document.querySelector('#cardContainer');
-// const selectCasa = document.querySelector('#casa');
-// const btnBuscar = document.querySelector('#buscar');
-// const searchBtn = document.querySelector('#search');
-
-// function filtrarCasa(array) {
-//     let casa = selectCasa.value;
-//     if (!casa) {
-//         return array;
-//     } else {
-//         resultado = array.filter((e) => e.casaDeHogwarts == casa);
-//         return resultado;
-//     }
-// }
-
-// function crearHTML(array) {
-//     contenedor.innerHTML = '';
-//     container.innerHTML = '';
-//     array.forEach((personaje) => {
-//         const tarjeta = `
-//             <div class="col">
-//                 <div class="card h-100">
-//                     <img src="${personaje.imagen}" class="card-img-top" alt="${personaje.apodo}">
-//                     <div class="card-body">
-//                         <h5 class="card-title">${personaje.apodo}</h5>
-//                         <p class="card-text">Nombre: ${personaje.personaje}</p>
-//                         <p class="card-text">Casa: ${personaje.casaDeHogwarts}</p>
-//                         <p class="card-text">Interpretado por: ${personaje.interpretado_por}</p>
-//                     </div>
-//                 </div>
-//             </div>`;
-//         contenedor.innerHTML += tarjeta;
-//     })
-// }
-
-// btnBuscar.addEventListener('click',()=>{
-
-//     fetch('https://fedeperin-harry-potter-api.herokuapp.com/personajes/')
-//     .then((response)=>response.json())
-//     .then((data)=>{
-//         crearHTML(filtrarCasa(data));
-//     })
-
-// })
-
-// function houseFilter(array) {
-//     let house = selectCasa.value;
-//     if (!house) {
-//         return array;
-//     } else {
-//         result = array.filter((e) => e.house == house);
-//         return result;
-//     }
-// }
-
-// function createHTML(array) {
-//     contenedor.innerHTML = ''
-//     container.innerHTML = ''
-//     array.forEach((personaje) => {
-//         const card = `
-//             <div class="col">
-//                 <div class="card h-100">
-//                     <img src="${personaje.image}" class="card-img-top" alt="${personaje.name}">
-//                     <div class="card-body">
-//                         <h5 class="card-title">${personaje.name}</h5>
-//                         <p class="card-text">Especie: ${personaje.species}</p>
-//                         <p class="card-text">Nacimiento: ${personaje.dateOfBirth}</p>
-//                         <p class="card-text">Casa: ${personaje.house}</p>
-//                         <p class="card-text">Patronus: ${personaje.patronus}</p>
-//                         <p class="card-text">Interpretado por: ${personaje.actor}</p>
-//                     </div>
-//                 </div>
-//             </div>`
-//         container.innerHTML += card
-//     })
-// }
-
-// async function traerDatos() {
-//     const respuesta = await fetch('./js/data.json');
-//     const data = await respuesta.json();
-//     createHTML(houseFilter(data));
-// }
-
-// searchBtn.addEventListener('click', () => {
-//     traerDatos();
-// })
-
-
-
-
-
-
-
-
