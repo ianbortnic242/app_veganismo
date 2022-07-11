@@ -44,12 +44,6 @@ function get_informacion_nutricional_receta(dic) {
 }
 
 
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 11a61f2a228d2289cfce691170838037fc0d91c1
 class Receta {
     constructor(imagen, nombre_receta, tipo_receta, ingredientes, informacion_nutricional, preparacion) {
         this.imagen = imagen;
