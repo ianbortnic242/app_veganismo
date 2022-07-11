@@ -2,6 +2,10 @@ const btnRecetasTodas = document.querySelector('#recetas_todas');
 const btnRecetasDulces = document.querySelector('#recetas_dulces');
 const btnRecetasSaladas = document.querySelector('#recetas_saladas');
 
+<<<<<<< HEAD
+=======
+// const btnPropiasRecetas = document.querySelector('#propias_recetas');
+>>>>>>> 11a61f2a228d2289cfce691170838037fc0d91c1
 
 const contenedor = document.querySelector('#contenedorTarjetas');
 const container = document.querySelector('#cardContainer');
@@ -45,6 +49,11 @@ function get_informacion_nutricional_receta(dic) {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 11a61f2a228d2289cfce691170838037fc0d91c1
 class Receta {
     constructor(imagen, nombre_receta, tipo_receta, ingredientes, informacion_nutricional, preparacion) {
         this.imagen = imagen;
