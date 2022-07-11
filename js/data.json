@@ -1,0 +1,42 @@
+[
+    {
+        "imagen": "../img_recetas/tiramisu.jpeg",
+        "nombre_receta": "Tiramisu",
+        "tipo_receta": "Dulce",
+        "ingredientes": "tomate, ajo",
+        "informacion_nutricional": "100 Calorías",
+        "preparacion": "hacer el tiramisu"
+    },
+    {
+        "imagen": "../img_recetas/pure_de_papas.jpeg",
+        "nombre_receta": "pure de papas",
+        "tipo_receta": "Salada",
+        "ingredientes": "tomate, ajo",
+        "informacion_nutricional": "100 Calorías",
+        "preparacion": "moler las papas, agregar leche de soya"
+    },
+    {
+        "imagen": "../img_recetas/pure_de_papas.jpeg",
+        "nombre_receta": "pure de papas",
+        "tipo_receta": "Salada",
+        "ingredientes": "tomate, ajo",
+        "informacion_nutricional": "100 Calorías",
+        "preparacion": "moler las papas, agregar leche de soya, moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya, moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya, moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya, moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,moler las papas, agregar leche de soya,"
+    },
+    {
+        "imagen": "../img_recetas/pure_de_papas.jpeg",
+        "nombre_receta": "pure de papas",
+        "tipo_receta": "Salada",
+        "ingredientes": "tomate, ajo",
+        "informacion_nutricional": "100 Calorías",
+        "preparacion": "moler las papas, agregar leche de soya"
+    },
+    {
+        "imagen": "../img_recetas/pure_de_papas.jpeg",
+        "nombre_receta": "pure de papas",
+        "tipo_receta": "Salada",
+        "ingredientes": "tomate, ajo",
+        "informacion_nutricional": "100 Calorías",
+        "preparacion": "moler las papas, agregar leche de soya"
+    }
+]
