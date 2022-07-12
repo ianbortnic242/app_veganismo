@@ -24,7 +24,6 @@ function get_informacion_nutricional_receta(dic) {
         values.push(val);
     }
 
-    console.log(values);
     let total_calorias = values.reduce((acc, ing) => acc + ing['calorias'] * ing['cantidad'], 0);
     let total_proteinas = values.reduce((acc, ing) => acc + ing['proteinas'] * ing['cantidad'], 0);
     let total_carbohidratos = values.reduce((acc, ing) => acc + ing['carbohidratos'] * ing['cantidad'], 0);
@@ -46,12 +45,12 @@ function get_informacion_nutricional_receta(dic) {
 
 class Receta {
     constructor(imagen, nombre_receta, tipo_receta, ingredientes, informacion_nutricional, preparacion) {
-        this.imagen = imagen;
         this.nombre_receta = nombre_receta;
         this.tipo_receta = tipo_receta
         this.ingredientes = ingredientes
         this.informacion_nutricional = informacion_nutricional
         this.preparacion = preparacion
+        this.imagen = imagen
     }
 }
 
@@ -59,7 +58,6 @@ class Receta {
 function guardarReceta(receta) {
     json_receta = JSON.stringify({
         "imagen": receta.imagen,
-        // "imagen": "../img_recetas/tiramisu.jpeg",
         "tipo_receta": receta.tipo_receta,
         "nombre_receta": receta.nombre_receta,
         "ingredientes": receta.ingredientes,
@@ -111,7 +109,6 @@ btnIngresarIngrediente.addEventListener('click', () => {
             .then(response => response.json())
             .then(response => {
                 if (response.items.length > 0) {
-                    // console.log(response.items[0].name);
                     let info = response.items[0];
                     new_ingredientes[nombre_ingrediente] = {
                         'info': info,
@@ -121,7 +118,6 @@ btnIngresarIngrediente.addEventListener('click', () => {
                         'calorias': info.calories,
                         'cantidad': cantidad_ingrediente
                     };
-                    console.log(new_ingredientes);
 
                 } else {
                     Swal.fire({
@@ -152,60 +148,71 @@ btnIngresarReceta.addEventListener('click', () => {
         })
 
     } else {
-        let imagen = document.getElementById('imagen_receta').value;
+        let imagen = document.getElementById('imagen_receta');
+        let files = imagen.files;
 
-        if (imagen == '') {
-            Swal.fire({
-                icon: 'error',
-                text: 'Debe subir una imagen de su receta',
-            })
 
-        } else {
-            let preparacion = document.getElementById('preparacion').value;
-            if (preparacion == '') {
+        const reader = new FileReader();
+
+
+        reader.addEventListener("load", () => {
+
+            imagen_url = reader.result;
+
+
+            if (imagen == '') {
                 Swal.fire({
                     icon: 'error',
-                    text: 'Debe detallar la preparacion de su receta',
+                    text: 'Debe subir una imagen de su receta',
                 })
 
             } else {
-
-                let tipo_receta = document.getElementById('tipo_receta').value;
-
-                let ingredientes = get_cantidad_ingredientes(new_ingredientes);
-                let [informacion_nutricional, calorias_per_100_gr] = get_informacion_nutricional_receta(new_ingredientes);
-
-
-
-                let receta = new Receta(imagen, nombre_receta, tipo_receta, ingredientes, informacion_nutricional, preparacion);
-                // total_calorias = new_ingredientes.reduce((acc, ing) => acc + ing.calories, 0);
-
-                if (calorias_per_100_gr == 0) {
+                let preparacion = document.getElementById('preparacion').value;
+                if (preparacion == '') {
                     Swal.fire({
                         icon: 'error',
-                        text: 'No puede ingresar una receta vacía.  ',
+                        text: 'Debe detallar la preparacion de su receta',
                     })
+
                 } else {
-                    if (calorias_per_100_gr > maximo_calorias_per_100_g) {
+
+                    let tipo_receta = document.getElementById('tipo_receta').value;
+
+                    let ingredientes = get_cantidad_ingredientes(new_ingredientes);
+                    let [informacion_nutricional, calorias_per_100_gr] = get_informacion_nutricional_receta(new_ingredientes);
+
+                    let receta = new Receta(imagen_url, nombre_receta, tipo_receta, ingredientes, informacion_nutricional, preparacion);
+
+                    if (calorias_per_100_gr == 0) {
                         Swal.fire({
                             icon: 'error',
-                            title: `${nombre_receta} no pudo ser ingresada.`,
-                            text: `Excede el máximo de calorías c/ 100 gr. (${maximo_calorias_per_100_g})! (tiene un total de ${calorias_per_100_gr} calorías c/ 100 gr.)`,
+                            text: 'No puede ingresar una receta vacía.  ',
                         })
                     } else {
-                        Swal.fire({
-                            icon: 'success',
-                            title: `${nombre_receta} ha sido ingresada con éxito!`,
-                        })
-                        guardarReceta(receta);
+                        if (calorias_per_100_gr > maximo_calorias_per_100_g) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: `${nombre_receta} no pudo ser ingresada.`,
+                                text: `Excede el máximo de calorías c/ 100 gr. (${maximo_calorias_per_100_g})! (tiene un total de ${calorias_per_100_gr} calorías c/ 100 gr.)`,
+                            })
+                        } else {
+                            Swal.fire({
+                                icon: 'success',
+                                title: `${nombre_receta} ha sido ingresada con éxito! Ya puedes verla mas arriba con las demás recetas!`,
+                            })
+                            guardarReceta(receta);
+                        }
                     }
+
                 }
 
             }
 
-        }
+        })
 
 
+
+        reader.readAsDataURL(files[0]);
 
 
 
@@ -262,6 +269,7 @@ async function traerRecetas(tipo_receta) {
         let nombre_receta = localStorage.key(i);
         receta = localStorage.getItem(nombre_receta);
         propias_recetas.push(JSON.parse(receta));
+
     }
 
     todas_las_recetas = propias_recetas.concat(data)
@@ -269,6 +277,9 @@ async function traerRecetas(tipo_receta) {
     recetas_filtradas = filtrarRecetas(todas_las_recetas, tipo_receta)
     createHTML(recetas_filtradas);
 }
+
+
+
 
 btnRecetasTodas.addEventListener('click', () => {
     traerRecetas("Todas");
