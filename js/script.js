@@ -5,8 +5,6 @@ const btnRecetasSaladas = document.querySelector('#recetas_saladas');
 
 const contenedor = document.querySelector('#contenedorTarjetas');
 const container = document.querySelector('#cardContainer');
-const selectTipoReceta = document.querySelector('#tipo_receta');
-const searchBtn = document.querySelector('#search');
 
 
 function get_cantidad_ingredientes(dic) {
